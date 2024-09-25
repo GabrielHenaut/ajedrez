@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 
 public class Tablero {
     private Casillero[][] casilleros = new Casillero[8][8];
@@ -7,7 +6,7 @@ public class Tablero {
     public Tablero() {
         for (int i = 0; i < this.size; i++) {
             for (int j = 0; j < this.size; j++) {
-                this.casilleros[i][j] = new Casillero();
+                this.casilleros[i][j] = new Casillero(i, j);
             }
         }
     }
@@ -27,5 +26,14 @@ public class Tablero {
 
     public Casillero getCasillero(int x, int y) {
         return this.casilleros[x][y];
+    }
+    
+    public void moverPieza(Pieza pieza, int x, int y) {
+    	try {
+    		pieza.mover(this.getCasillero(x, y));
+    	} catch (Exception e) {
+        	System.out.println("movimiento invalido");
+        	System.out.println(e);
+	    }
     }
 }

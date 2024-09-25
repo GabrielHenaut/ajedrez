@@ -1,9 +1,9 @@
 
-public class Peon extends Pieza {
+public class Rei extends Pieza {
 	private Boolean didInitialMove = false;
 
-    public Peon(Casillero casillero, ColorPieza color) {
-        super(casillero, color, 'P');
+    public Rei(Casillero casillero, ColorPieza color) {
+        super(casillero, color, 'R');
     }
 
     @Override

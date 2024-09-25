@@ -1,9 +1,9 @@
 
-public class Peon extends Pieza {
+public class Alfile extends Pieza {
 	private Boolean didInitialMove = false;
 
-    public Peon(Casillero casillero, ColorPieza color) {
-        super(casillero, color, 'P');
+    public Alfile(Casillero casillero, ColorPieza color) {
+        super(casillero, color, 'A');
     }
 
     @Override
